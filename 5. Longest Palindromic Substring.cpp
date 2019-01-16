@@ -16,7 +16,7 @@ public:
     }
 
     string longestPalindrome(string s) {
-        
+        if(s.size() == 0) return "";
         int len = s.size()-1;
         memset(dp, -1, sizeof dp);
         int maxy  = 0, a;
@@ -36,7 +36,7 @@ public:
                 }
             }
         }
-        cout << maxy << endl;
+        // cout << maxy << endl;
         return s.substr(a, maxy);
     }
 };
